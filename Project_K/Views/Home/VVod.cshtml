@@ -1,0 +1,19 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewBag.Title = " – Авторизация";
+}
+<div class="jumbotron">
+    <h2>Авторизация</h2>
+    @using (Html.BeginForm("VVod", "Home", FormMethod.Post))
+    {
+        <input type="hidden" value="@ViewBag.BookId" name="BookId" />
+        <p>@Html.TextBox("Person", null, new { @placeholder = "Логин" })</p>
+        <p>@Html.TextBox("Parol", null, new { @placeholder = "Пароль" })</p>
+        <p></p>
+        <p><input class="btn btn-default" type="submit" value="Войти" /></p>
+        <p><a class="btn btn-default" href="http://localhost:59510/Home/Index">Войти</a></p>
+        <p><a class="btn btn-default" href="http://localhost:59510/Home/Reg">Регистрация</a></p>
+    }
+    </div>

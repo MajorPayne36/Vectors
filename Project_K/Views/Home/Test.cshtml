@@ -1,0 +1,34 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = " – Практика";
+}
+<h2>Тестирование</h2>
+<div class="jumbotron">
+    
+    <div>
+        @using (Html.BeginForm("Test", "Home", FormMethod.Post))
+        {
+            <input type="hidden" value="@ViewBag.QId" name="QId" />
+                <p>!Question</p>
+                <p>
+                    @Html.RadioButton("Answer", "red")
+                                <span>!Answer1</span>
+                            </p>
+                <p>
+                    @Html.RadioButton("Answer", "blue")
+                                <span>!Answer2</span>
+                            </p>
+                <p>
+                    @Html.RadioButton("Answer", "green")
+                                <span>!Answer3</span>
+                            </p>
+                <p><input class="btn btn-default" type="submit" value="Ответить" /></p>
+        }
+    </div>
+    <div>
+
+    </div>
+</div>

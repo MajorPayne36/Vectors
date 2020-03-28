@@ -1,0 +1,78 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: white;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.he {
+    text-align: center;
+    color: #4a8db7;
+}
+
+jumb{
+    background-color: white;
+}
+
+.bt_t a {
+    padding: 20px 50px;
+    width:100%;
+    margin:5px 0 5px 0;
+}
+
+.V {
+    font-size: 50px;
+    color: #4a8db7;
+    text-align:center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px #3b7097;
+}
+
+.txt {
+    background-color: white;
+    opacity: 0.9;
+    border-radius: 6px;
+    font-size: 18px ;
+    text-align: justify
+}
+/*кнопки для примеров*/
+#hider {
+    display:none;
+}
+
+#hider:checked + .content {
+    display: block;
+}
+
+#clickme {
+    border:1px solid #3b7097;
+    padding: 3px;
+    border-radius:2px;
+    cursor: pointer;
+}
+
+.content {
+    margin-top: 10px;
+    display: none;
+}
+/*   */
+
