@@ -11,21 +11,36 @@
     <div>
         @using (Html.BeginForm("Test", "Home", FormMethod.Post))
         {
-            <input type="hidden" value="@ViewBag.QId" name="QId" />
-                <p>!Question</p>
+             foreach (var x in ViewBag.tests)
+            {
+                <input type="hidden" value=@x.Id_Test name="QId" />
+                <p>@x.Question</p>
                 <p>
                     @Html.RadioButton("Answer", "red")
-                                <span>!Answer1</span>
-                            </p>
+                    <span>@x.Answer_1</span>
+                </p>
                 <p>
                     @Html.RadioButton("Answer", "blue")
-                                <span>!Answer2</span>
-                            </p>
+                    <span>@x.Answer_2 </span>
+                </p>
                 <p>
                     @Html.RadioButton("Answer", "green")
-                                <span>!Answer3</span>
-                            </p>
+                    <span>@x.Answer_3</span>
+                </p>
+                <p>
+                    @Html.RadioButton("Answer", "orange")
+                    @if (x.Answer_4 == null)
+                    {
+                        continue;
+                    }
+                    else
+                    { 
+                        <span>@x.Answer_4</span> 
+                    }
+                </p>
                 <p><input class="btn btn-default" type="submit" value="Ответить" /></p>
+            }
+
         }
     </div>
     <div>
